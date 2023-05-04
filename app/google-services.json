@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "771211464119",
+    "firebase_url": "https://animalworld-4e75a-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "animalworld-4e75a",
+    "storage_bucket": "animalworld-4e75a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771211464119:android:4f7e346a7d0b17ab0e2c32",
+        "android_client_info": {
+          "package_name": "com.example.animalworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771211464119-tukvc3fk7bpq5gb8q76belvs96pn354d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2izJ64-4Ew5fp_o8xCk6C7iRGXwtw-4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771211464119-tukvc3fk7bpq5gb8q76belvs96pn354d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771211464119:android:7ed7fc65192ce7ad0e2c32",
+        "android_client_info": {
+          "package_name": "com.example.theanimalworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771211464119-tukvc3fk7bpq5gb8q76belvs96pn354d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2izJ64-4Ew5fp_o8xCk6C7iRGXwtw-4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771211464119-tukvc3fk7bpq5gb8q76belvs96pn354d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

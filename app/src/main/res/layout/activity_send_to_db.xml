@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Send_to_db"
+    android:background="@drawable/welcome"
+    >
+
+    <LinearLayout
+        android:id="@+id/registerLayout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/bgtrasparent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <TextView
+            android:textStyle="bold"
+            android:text="SignUp"
+            android:textColor="@color/fireorange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:padding="10sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:textColorHint="@color/fireorange">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/usernameA"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:hint="username"
+
+                android:textColor="@color/fireorange"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:textColorHint="@color/fireorange">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ageA"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:hint="age"
+                android:inputType="number"
+                android:textColor="@color/fireorange"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:textColorHint="@color/fireorange"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordA"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:hint="password"
+                android:inputType="textPassword"
+
+                android:textColor="@color/fireorange"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"/>
+        <TextView
+            android:id="@+id/txtA"
+            android:textStyle="bold"
+            android:text="Alredy have an account? Login"
+            android:textColor="@color/fireorange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="10sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/bgtrasparent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <TextView
+            android:textStyle="bold"
+            android:text="Login"
+            android:textColor="@color/fireorange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:padding="10sp"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:textColorHint="@color/fireorange">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/usernameB"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+
+                android:textColor="@color/fireorange"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:textColorHint="@color/fireorange"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordB"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:hint="password"
+                android:inputType="textPassword"
+
+                android:textColor="@color/fireorange"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"/>
+        <TextView
+            android:id="@+id/txtB"
+            android:textStyle="bold"
+            android:text="Don't have an account? SignUp"
+            android:textColor="@color/fireorange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="10sp"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get started"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="already have an account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
