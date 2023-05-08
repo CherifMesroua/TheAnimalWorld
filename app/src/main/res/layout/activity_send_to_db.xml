@@ -7,7 +7,16 @@
     tools:context=".Send_to_db"
     android:background="@drawable/welcome"
     >
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo" />
     <LinearLayout
         android:id="@+id/registerLayout"
         android:layout_width="250dp"
@@ -77,15 +86,15 @@
                 android:textColor="@color/fireorange"/>
         </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:onClick="signup"
+            android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Register"/>
         <ProgressBar
             android:id="@+id/p"
-            android:visibility="gone"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
         <TextView
             android:id="@+id/txtA"
             android:textStyle="bold"
@@ -131,7 +140,6 @@
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:hint="Username"
-
                 android:textColor="@color/fireorange"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -147,7 +155,6 @@
                 android:layout_height="wrap_content"
                 android:hint="password"
                 android:inputType="textPassword"
-
                 android:textColor="@color/fireorange"/>
         </com.google.android.material.textfield.TextInputLayout>
         <Button

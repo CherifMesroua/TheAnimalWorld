@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/circleContainer"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/circleContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home"
-    android:background="#78BFEF">
-
-    <ImageView
-        android:id="@+id/sky1"
-        android:layout_width="300dp"
-        android:layout_height="69dp"
-        android:onClick="sky"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.381"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.015"
-        app:srcCompat="@drawable/sky" />
+    android:background="#78BFEF"
+    tools:context=".Home">
 
     <ImageView
         android:id="@+id/land"
@@ -35,6 +22,19 @@
         app:srcCompat="@drawable/land" />
 
     <ImageView
+        android:id="@+id/sky1"
+        android:layout_width="300dp"
+        android:layout_height="69dp"
+        android:onClick="sky"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.381"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015"
+        app:srcCompat="@drawable/sky" />
+
+    <ImageView
         android:id="@+id/sea"
         android:layout_width="1156dp"
         android:layout_height="89dp"
@@ -46,6 +46,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/sea" />
+
+    <ImageView
+        android:id="@+id/whale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896"
+        app:srcCompat="@drawable/whale" />
 
     <ImageView
         android:id="@+id/sea1"
@@ -74,7 +86,6 @@
         app:srcCompat="@drawable/sky" />
 
 
-
     <ImageView
         android:id="@+id/sky2"
         android:layout_width="278dp"
@@ -87,4 +98,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.016"
         app:srcCompat="@drawable/sky" />
+
+    <ImageView
+        android:id="@+id/hand"
+        android:layout_width="97dp"
+        android:layout_height="99dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714"
+        app:srcCompat="@drawable/hand" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="166dp"
+        android:layout_height="91dp"
+        android:background="@drawable/bglevel"
+        android:gravity="center"
+        android:text="Click on the land"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.412" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
