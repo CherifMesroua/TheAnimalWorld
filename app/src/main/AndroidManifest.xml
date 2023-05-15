@@ -22,11 +22,15 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".Welcome"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".LandAnimalLevels"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Welcome"
+            android:name=".Landlevel1"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>

@@ -178,14 +178,16 @@ public class Send_to_db extends AppCompatActivity {
 
 
     public void writeNewUser(String username, String password, int age) {
-        p.setVisibility(View.GONE);
-        User user = new User(username, password,age);
-        HashMap<String, Object> rankValues = new HashMap<>();
-        long initial_time= TimeUnit.HOURS.toMillis(0) + TimeUnit.MINUTES.toMillis(0) + TimeUnit.SECONDS.toMillis(0);
+            p.setVisibility(View.GONE);
+            User user = new User(username, password,age);
+            HashMap<String, Object> rankValues = new HashMap<>();
+            long initial_time= 0;
 
-        rankValues.put("ranklevel", 1);
-        rankValues.put("total_nbr_stars", 0);
-        rankValues.put("total_time", System.currentTimeMillis());
+            rankValues.put("ranklevel", 1);
+            rankValues.put("total_nbr_stars", 0);
+
+            //rankValues.put("total_time", System.currentTimeMillis());
+            rankValues.put("total_time", initial_time);
 
         //add a activity (level)
             HashMap<String, Object> activityValues = new HashMap<>();
@@ -195,9 +197,8 @@ public class Send_to_db extends AppCompatActivity {
             activityValues.put("id", 0);
             rankValues.put("activity "+String.valueOf(0), activityValues);
 
-
-        reference.child(username).setValue(user);
-        reference.child(username).child("rank").setValue(rankValues);
+            reference.child(username).setValue(user);
+            reference.child(username).child("rank").setValue(rankValues);
        /* reference.child(username).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
