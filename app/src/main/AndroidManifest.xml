@@ -14,15 +14,19 @@
         android:theme="@style/Theme.TheAnimalWorld"
         tools:targetApi="31">
         <activity
-            android:name=".Send_to_db"
+            android:name=".Home"
             android:exported="false"
             android:screenOrientation="landscape"/>
         <activity
-            android:name=".Home"
+            android:name=".Send_to_db"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Welcome"
+            android:name=".Landlevel1"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".TestActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
@@ -30,7 +34,8 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Landlevel1"
+
+            android:name=".Welcome"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>

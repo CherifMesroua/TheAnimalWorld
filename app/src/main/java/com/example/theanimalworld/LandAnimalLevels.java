@@ -1,5 +1,6 @@
 package com.example.theanimalworld;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -30,6 +31,10 @@ public class LandAnimalLevels extends SettingShow {
             public void onClick(View v) {
                 show_setting(wsetting,sl);
             }
+        });
+        land1.setOnClickListener(View ->{
+            Intent intent = new Intent(LandAnimalLevels.this, Landlevel1.class);
+            startActivity(intent);
         });
     }
 

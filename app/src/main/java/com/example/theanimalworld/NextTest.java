@@ -18,7 +18,7 @@ public abstract class NextTest extends SettingShow {
     String[] words = new String[3];
     int p = 0;
 
-    public void next1Test(TextView text, ImageView m1, ImageView m2, ImageView m3, ArrayList<Item> imageList){
+    public void nextTest(TextView text, ImageView m1, ImageView m2, ImageView m3, ArrayList<Item> imageList){
 
         //shuffle randomize the imageList
         Collections.shuffle(imageList);

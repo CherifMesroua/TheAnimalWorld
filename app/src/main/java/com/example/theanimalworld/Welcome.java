@@ -21,8 +21,8 @@ public class Welcome extends SettingShow {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(Welcome.this);
-        String user = preferences.getString("username", "");
-        if (user.equals("")) {
+        USERNAME=preferences.getString("username","");
+        if (USERNAME.equals("")) {
             Intent intent = new Intent(Welcome.this, Send_to_db.class);
             startActivity(intent);
             finish();

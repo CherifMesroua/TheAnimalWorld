@@ -56,7 +56,7 @@ public class Home extends AppCompatActivity {
         whale.startAnimation(animation3);
 
         ImageView sea1 = findViewById(R.id.sea1);
-        TranslateAnimation animation4 = new TranslateAnimation(0, 100, 0, 0);
+        TranslateAnimation animation4 = new TranslateAnimation(0, 0, 0, -0);
         animation4.setDuration(2500);
         animation4.setRepeatCount(Animation.INFINITE);
         animation4.setRepeatMode(Animation.REVERSE);

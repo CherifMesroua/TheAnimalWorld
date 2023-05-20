@@ -86,7 +86,7 @@
         app:srcCompat="@drawable/emptystars" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/stars"
         android:layout_width="185dp"
         android:layout_height="71dp"
         android:layout_alignParentBottom="true"

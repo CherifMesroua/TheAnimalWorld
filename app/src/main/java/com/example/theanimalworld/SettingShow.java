@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SettingShow extends AppCompatActivity{
+public class SettingShow extends Send_to_db{
     protected void show_setting(ImageView wsetting, LinearLayout sl){
 
         if (sl.getVisibility() == View.VISIBLE) {

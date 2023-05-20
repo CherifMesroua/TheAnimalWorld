@@ -10,12 +10,14 @@
 
     <ImageView
         android:id="@+id/land"
-        android:layout_width="883dp"
-        android:layout_height="314dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="84dp"
         android:onClick="land"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/sea1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -36,41 +38,48 @@
 
     <ImageView
         android:id="@+id/sea"
-        android:layout_width="1156dp"
-        android:layout_height="89dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:onClick="sea"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/land"
+        app:layout_constraintTop_toTopOf="@+id/sea1"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/sea" />
+        app:srcCompat="@drawable/sea"
+        android:scaleType="centerCrop"/>
 
     <ImageView
         android:id="@+id/whale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
+        android:layout_marginEnd="251dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sea1"
+        app:layout_constraintEnd_toEndOf="@+id/sea1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/sea1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.896"
+        app:layout_constraintVertical_bias="0.996"
         app:srcCompat="@drawable/whale" />
 
     <ImageView
         android:id="@+id/sea1"
-        android:layout_width="1081dp"
-        android:layout_height="88dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:onClick="sea"
+        android:scaleType="centerCrop"
+        android:scaleY="1.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.563"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.996"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@id/land"
+        app:layout_constraintTop_toTopOf="@+id/land"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/sea" />
+
 
     <ImageView
         android:id="@+id/sky"
@@ -85,7 +94,6 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/sky" />
 
-
     <ImageView
         android:id="@+id/sky2"
         android:layout_width="278dp"
@@ -93,10 +101,10 @@
         android:onClick="sky"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.016"
+        app:layout_constraintVertical_bias="0.05"
         app:srcCompat="@drawable/sky" />
 
     <ImageView
@@ -113,11 +121,11 @@
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="166dp"
-        android:layout_height="91dp"
+        android:layout_width="209dp"
+        android:layout_height="80dp"
         android:background="@drawable/bglevel"
         android:gravity="center"
-        android:text="Click on the land"
+        android:text="إضغط على الارض"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -126,6 +134,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.412" />
+
+    <TextView
+        android:id="@+id/rank_level"
+        android:layout_width="85dp"
+        android:layout_height="72dp"
+        android:background="@drawable/rank_star"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
