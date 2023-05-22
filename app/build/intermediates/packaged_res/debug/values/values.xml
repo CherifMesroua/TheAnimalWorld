@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="fireorange">#FA6C00</color>
+    <color name="green">#70DD37</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="red">#FF0000</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">TheAnimalWorld</string>
+    <string name="default_web_client_id" translatable="false">771211464119-tukvc3fk7bpq5gb8q76belvs96pn354d.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://animalworld-4e75a-default-rtdb.europe-west1.firebasedatabase.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">771211464119</string>
+    <string name="google_api_key" translatable="false">AIzaSyA2izJ64-4Ew5fp_o8xCk6C7iRGXwtw-4o</string>
+    <string name="google_app_id" translatable="false">1:771211464119:android:7ed7fc65192ce7ad0e2c32</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA2izJ64-4Ew5fp_o8xCk6C7iRGXwtw-4o</string>
+    <string name="google_storage_bucket" translatable="false">animalworld-4e75a.appspot.com</string>
+    <string name="project_id" translatable="false">animalworld-4e75a</string>
+    <style name="Theme.TheAnimalWorld" parent="Theme.Material3.Light.NoActionBar">
+        
+        <item name="colorPrimary">@color/fireorange</item>
+        <item name="colorPrimaryVariant">@color/fireorange</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        
+    </style>
+</resources>
