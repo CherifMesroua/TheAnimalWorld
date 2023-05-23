@@ -31,6 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -149,32 +150,71 @@ public class Send_to_db extends AppCompatActivity {
         }
 
     }
-    public int NBR_STARS,AGE,RANKLEVEL,TOTLA_TIME;
+    public int NBR_STARS,RANKLEVEL,TOTAL_TIME,AGE;
     public String USERNAME;
 
-    public void getdata(String user) {
+    public void get_rank_data(String user) {
         reference.child(user).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
-                if(task.isSuccessful()){
-                    if(task.getResult().exists()){
-                        DataSnapshot dataSnapshot= task.getResult();
-                        AGE=dataSnapshot.child("age").getValue(Integer.class);
-                        NBR_STARS=dataSnapshot.child("rank").child("total_nbr_stars").getValue(Integer.class);
-                        RANKLEVEL=dataSnapshot.child("rank").child("ranklevel").getValue(Integer.class);
-                        TOTLA_TIME=dataSnapshot.child("rank").child("total_time").getValue(Integer.class);
-                        Toast.makeText(getApplicationContext(),String.valueOf(NBR_STARS),Toast.LENGTH_SHORT).show();
-                    }else{
-                        //does not exist
-                        Toast.makeText(getApplicationContext(),"does not exist",Toast.LENGTH_SHORT).show();
+                if (task.isSuccessful()) {
+                    if (task.getResult().exists()) {
+                        DataSnapshot dataSnapshot = task.getResult();
+                        AGE = dataSnapshot.child("age").getValue(Integer.class);
+                        NBR_STARS = dataSnapshot.child("rank").child("total_nbr_stars").getValue(Integer.class);
+                        RANKLEVEL = dataSnapshot.child("rank").child("ranklevel").getValue(Integer.class);
+                        TOTAL_TIME = dataSnapshot.child("rank").child("total_time").getValue(Integer.class);
+
+                        Toast.makeText(getApplicationContext(), String.valueOf(NBR_STARS), Toast.LENGTH_SHORT).show();
+                    } else {
+                        // Does not exist
+                        Toast.makeText(getApplicationContext(), "Data does not exist", Toast.LENGTH_SHORT).show();
                     }
-                }else{
-                    //failed to read
-                    Toast.makeText(getApplicationContext(),"failed to read",Toast.LENGTH_SHORT).show();
+                } else {
+                    // Failed to read
+                    Toast.makeText(getApplicationContext(), "Failed to read data", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
+
+
+    public HashMap<String, Object> ACTIVITY_INFO;
+
+    public void get_activity_data(String user, int activity_id) {
+        String id_of_A = "activity" + String.valueOf(activity_id);
+        reference.child(user).child("rank").child(id_of_A).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (task.isSuccessful()) {
+                    if (task.getResult().exists()) {
+                        DataSnapshot dataSnapshot = task.getResult();
+
+                        int activity_time = dataSnapshot.child("finished_time").getValue(Integer.class);
+                        int activity_stars = dataSnapshot.child("nbr_stars").getValue(Integer.class);
+                        boolean status = dataSnapshot.child("state").getValue(Boolean.class);
+
+                        HashMap<String, Object> activity_info = new HashMap<>();
+                        activity_info.put("finished_time", activity_time);
+                        activity_info.put("nbr_stars", activity_stars);
+                        activity_info.put("state", status);
+
+                        ACTIVITY_INFO=activity_info;
+
+                        Toast.makeText(getApplicationContext(), String.valueOf(activity_stars), Toast.LENGTH_SHORT).show();
+                    } else {
+                        // Does not exist
+                        Toast.makeText(getApplicationContext(), "Data does not exist", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    // Failed to read
+                    Toast.makeText(getApplicationContext(), "Failed to read data", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+
     private void checkIfUserExists(String user) {
         reference.child(user).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
@@ -238,7 +278,7 @@ public class Send_to_db extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(),"sucsses update",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"creation done",Toast.LENGTH_SHORT).show();
 
                         } else {
                             // Activity creation failed
@@ -257,10 +297,14 @@ public class Send_to_db extends AppCompatActivity {
 
         //rankValues.put("total_time", System.currentTimeMillis());
       //  rankValues.put("total_time", rankId.getTotal_time());
+        String id_activity=String.valueOf(rankId.activity.get_Id());
+
         reference.child(userId).child("rank").child("total_time").setValue(rankId.getTotal_time());
         reference.child(userId).child("rank").child("total_nbr_stars").setValue(rankId.getTotal_nbr_stars());
         reference.child(userId).child("rank").child("ranklevel").setValue(rankId.getRanklevel());
-      /*  //add a activity (level)
+
+        reference.child(userId).child("rank").child("activity" + id_activity).child("finished_time").setValue(rankId.activity.getFinished_time());
+        reference.child(userId).child("rank").child("activity" + id_activity).child("nbr_stars").setValue(rankId.activity.getNbr_stars()); /*  //add a activity (level)
         HashMap<String, Object> activityValues = new HashMap<>();
         activityValues.put("finished_time", rankId.getActivity().getFinished_time());
         activityValues.put("state", true);

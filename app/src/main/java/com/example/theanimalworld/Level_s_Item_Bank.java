@@ -24,11 +24,11 @@ public class Level_s_Item_Bank {
 
     public ArrayList<Item> farm_imageList(){
         ArrayList<Item> farm=new ArrayList<>();
-        farm.add(new Item("Dog", R.drawable.dog,R.raw.dog,R.raw.dog_name));
-        farm.add(new Item("Horse", R.drawable.horse,R.raw.horse,R.raw.horse_name));
-        farm.add(new Item("Chicken", R.drawable.chicken,R.raw.chicken,R.raw.chicken_name));
-        farm.add(new Item("Turky", R.drawable.turky,R.raw.turkey,R.raw.turkey_name));
-        farm.add(new Item("danky", R.drawable.danky,R.raw.donkey,R.raw.donkey_name));
+        farm.add(new Item("كلب", R.drawable.dog,R.raw.dog,R.raw.dog_name));
+        farm.add(new Item("حصان", R.drawable.horse,R.raw.horse,R.raw.horse_name));
+        farm.add(new Item("دجاجة", R.drawable.chicken,R.raw.chicken,R.raw.chicken_name));
+        farm.add(new Item("ديك رومي", R.drawable.turky,R.raw.turkey,R.raw.turkey_name));
+        farm.add(new Item("حمار", R.drawable.danky,R.raw.donkey,R.raw.donkey_name));
         return farm;
     }
 

@@ -14,11 +14,24 @@
         android:theme="@style/Theme.TheAnimalWorld"
         tools:targetApi="31">
         <activity
-            android:name=".Home"
+            android:name=".Welcome"
+
+            android:exported="false" />
+        <activity
+            android:name=".Learning_level1"
+
             android:exported="false"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Send_to_db"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Home"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".LandAnimalLevels"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
@@ -27,15 +40,6 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".TestActivity"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".LandAnimalLevels"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-        <activity
-
-            android:name=".Welcome"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>

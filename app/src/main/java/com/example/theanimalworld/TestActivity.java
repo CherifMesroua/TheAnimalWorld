@@ -23,12 +23,18 @@ public class TestActivity extends Send_to_db {
         rank.setTotal_time(55);
         rank.setTotal_nbr_stars(33);
         rank.setRanklevel();
-        updateUser(USERNAME,rank);
 
-        getdata(USERNAME);
+        rank.activity.setNbr_stars(3);
+        rank.activity.setId(0);
+        rank.activity.setFinished_time(222);
+
+        updateUser("cherif123123",rank);
+
+        get_activity_data("cherif123123",0);
+        get_rank_data("cherif123123");
 
     }
     public void testbutton(View v){
-        te.setText(String.valueOf(NBR_STARS)+" "+String.valueOf(TOTLA_TIME)+" "+String.valueOf(RANKLEVEL));
+        te.setText(String.valueOf(NBR_STARS)+" "+String.valueOf(TOTAL_TIME)+" "+String.valueOf(RANKLEVEL));
     }
 }

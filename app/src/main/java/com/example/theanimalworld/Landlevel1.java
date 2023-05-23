@@ -2,6 +2,7 @@ package com.example.theanimalworld;
 
 import static android.os.SystemClock.sleep;
 
+import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,7 +25,7 @@ public class Landlevel1 extends SettingShow {
     ImageView img1,img2,img3;
     TextView txt,time,txt1;
     Timer timer;
-    int id=0, n=1,correct,stars_nbr=1,correct_nbr=0;
+    int id=0, n=0,correct,stars_nbr=1,correct_nbr=0;
 
     int[] images = new int[3],soundes1 = new int[3],soundes2=new int[3];
     String[] words = new String[3];
@@ -34,6 +35,7 @@ public class Landlevel1 extends SettingShow {
 
     int minutes=0,seconds=59;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -178,7 +180,7 @@ public class Landlevel1 extends SettingShow {
         });
 
 
-        if(n >= 3 || (seconds==0&&minutes==0)){
+        if(n > 3 || (seconds==0&&minutes==0)){
             timer.purge();
             timer.cancel();
             if(seconds>30){
@@ -198,7 +200,9 @@ public class Landlevel1 extends SettingShow {
             rank.setTotal_nbr_stars(stars_nbr);
             rank.setTotal_time(seconds);
             rank.setRanklevel();
+
             createActivity(id);
+
             updateUser(USERNAME,rank);
         }
         //ooooooooooooooooooooooooooooooo
@@ -217,10 +221,6 @@ public class Landlevel1 extends SettingShow {
                 }
                 else if(seconds<30){
                     timertxt.setTextColor(getResources().getColor(R.color.fireorange));
-                }
-                if(seconds==0 && minutes==0){
-                    timer.purge();
-                    timer.cancel();
                 }
                 else{
                     seconds--;
@@ -267,6 +267,7 @@ public class Landlevel1 extends SettingShow {
         Random random = new Random();
         correct=random.nextInt(3);
         txt.setText(words[correct]);
+
         sound11 = MediaPlayer.create(this,soundes1[0]);
         sound12 = MediaPlayer.create(this,soundes1[1]);
         sound13 = MediaPlayer.create(this,soundes1[2]);

@@ -30,7 +30,7 @@ public class Activity {
         this.state = state;
     }
 
-    public int getId() {
+    public int get_Id() {
         return id;
     }
 

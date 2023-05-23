@@ -2,7 +2,7 @@ package com.example.theanimalworld;
 
 public class Rank extends Send_to_db{
 
-    Activity activity;
+    Activity activity=new Activity();
     int ranklevel,total_nbr_stars,total_time;
 
     public Rank(){
@@ -40,12 +40,12 @@ public class Rank extends Send_to_db{
     }
 
     public void setTotal_nbr_stars(int total_nbr_stars) {
-        //getdata(USERNAME);
+        //get_rank_data(USERNAME);
         this.total_nbr_stars = total_nbr_stars+NBR_STARS;
     }
 
     public void setTotal_time(int total_time) {
-        //getdata(USERNAME);
-        this.total_time = total_time+TOTLA_TIME;
+        //get_rank_data(USERNAME);
+        this.total_time = total_time+TOTAL_TIME;
     }
 }

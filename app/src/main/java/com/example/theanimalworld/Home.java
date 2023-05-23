@@ -26,7 +26,7 @@ public class Home extends AppCompatActivity {
 
 
         ImageView cloud = findViewById(R.id.sky);
-        TranslateAnimation animation = new TranslateAnimation(0, 500, 0, 0);
+        TranslateAnimation animation = new TranslateAnimation(0, 300, 0, 0);
         animation.setDuration(8000);
         animation.setRepeatCount(Animation.INFINITE);
         animation.setRepeatMode(Animation.REVERSE);
@@ -46,22 +46,24 @@ public class Home extends AppCompatActivity {
         animation2.setRepeatMode(Animation.REVERSE);
         cloud2.startAnimation(animation2);
 
-        ImageView whale=findViewById(R.id.whale);
+
         ImageView sea = findViewById(R.id.sea);
         TranslateAnimation animation3 = new TranslateAnimation(0, 0, 0, -30);
         animation3.setDuration(2500);
         animation3.setRepeatCount(Animation.INFINITE);
         animation3.setRepeatMode(Animation.REVERSE);
         sea.startAnimation(animation3);
-        whale.startAnimation(animation3);
 
+
+        ImageView whale=findViewById(R.id.whale);
         ImageView sea1 = findViewById(R.id.sea1);
-        TranslateAnimation animation4 = new TranslateAnimation(0, 0, 0, -0);
+        TranslateAnimation animation4 = new TranslateAnimation(0, 0, 0, 50);
         animation4.setDuration(2500);
         animation4.setRepeatCount(Animation.INFINITE);
         animation4.setRepeatMode(Animation.REVERSE);
         sea1.startAnimation(animation4);
-
+        whale.startAnimation(animation4);
+        
         hand =findViewById(R.id.hand);
         ScaleAnimation scaleAnimation = new ScaleAnimation(
                 1f,  // Start scale X

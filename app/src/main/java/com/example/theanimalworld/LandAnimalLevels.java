@@ -12,12 +12,16 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LandAnimalLevels extends SettingShow {
-    ImageView land1,wsetting;
+    ImageView land1,wsetting,level1,stars_level1;
     LinearLayout sl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_land_animal);
+
+        get_activity_data(USERNAME,0);
+
+
         land1=findViewById(R.id.land1);
         TranslateAnimation animation = new TranslateAnimation(0, 0, 0, 10);
         animation.setDuration(1500);
@@ -32,10 +36,24 @@ public class LandAnimalLevels extends SettingShow {
                 show_setting(wsetting,sl);
             }
         });
-        land1.setOnClickListener(View ->{
-            Intent intent = new Intent(LandAnimalLevels.this, Landlevel1.class);
+        level1=findViewById(R.id.level1);
+        level1.setOnClickListener(View ->{
+            Intent intent = new Intent(LandAnimalLevels.this, Learning_level1.class);
             startActivity(intent);
         });
+
+
+
+       /* stars_level1=findViewById(R.id.stars_level1);
+        if(ACTIVITY_INFO.get("nbr_stars").equals(3)){
+            stars_level1.setImageResource(R.drawable.full_stars);
+        }
+        else if(ACTIVITY_INFO.get("nbr_stars").equals(2)){
+            stars_level1.setImageResource(R.drawable.stars_70);
+        }
+        else{
+            stars_level1.setImageResource(R.drawable.stars_30);
+        }*/
     }
 
 }
