@@ -201,7 +201,7 @@ public class Send_to_db extends AppCompatActivity {
 
                         ACTIVITY_INFO=activity_info;
 
-                        Toast.makeText(getApplicationContext(), String.valueOf(activity_stars), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), String.valueOf(ACTIVITY_INFO.get("state")), Toast.LENGTH_SHORT).show();
                     } else {
                         // Does not exist
                         Toast.makeText(getApplicationContext(), "Data does not exist", Toast.LENGTH_SHORT).show();
