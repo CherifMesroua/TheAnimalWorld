@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".FirebaseOffline"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -27,7 +28,7 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Home"
+            android:name=".LandAnimalLevels"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
@@ -39,9 +40,7 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-
-            android:name=".LandAnimalLevels"
-
+            android:name=".Home"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>

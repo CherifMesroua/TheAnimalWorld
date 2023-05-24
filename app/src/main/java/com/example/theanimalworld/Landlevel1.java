@@ -50,11 +50,8 @@ public class Landlevel1 extends SettingShow {
         sl=findViewById(R.id.settingLayout);
         Game_Sounds game_sounds=new Game_Sounds(this);
 
-        wsetting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                show_setting(wsetting,sl);
-            }
+        wsetting.setOnClickListener(View->{
+            show_setting(wsetting,sl);
         });
         //ooooooooooooooooooooooooooooooo
         // Create a list of Image objects

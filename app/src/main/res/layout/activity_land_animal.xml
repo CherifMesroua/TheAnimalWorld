@@ -102,21 +102,23 @@
         android:id="@+id/lock1"
         android:layout_width="100dp"
         android:layout_height="97dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.884"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/level3"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="@+id/level3"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.789"
         app:srcCompat="@drawable/lock" />
 
     <ImageView
         android:id="@+id/lock2"
         android:layout_width="100dp"
         android:layout_height="97dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/level2"
+        app:layout_constraintStart_toStartOf="@+id/level2"
+        app:layout_constraintTop_toTopOf="@+id/level2"
+        app:layout_constraintVertical_bias="0.789"
         app:srcCompat="@drawable/lock" />
 
     <ImageView
@@ -126,10 +128,10 @@
         android:onClick="show_setting"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintHorizontal_bias="0.979"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintVertical_bias="0.039"
         app:srcCompat="@drawable/setting" />
 
     <LinearLayout
@@ -188,42 +190,42 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="حيوانات المزرعة"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.289" />
+        app:layout_constraintBottom_toTopOf="@+id/stars_level1"
+        app:layout_constraintEnd_toEndOf="@+id/level1"
+        app:layout_constraintStart_toStartOf="@+id/level1"
+        app:layout_constraintTop_toTopOf="@+id/level1"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="170sp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="حيوانات الصحراء"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.295" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/level2"
+        app:layout_constraintStart_toStartOf="@+id/level2"
+        app:layout_constraintTop_toTopOf="@+id/level2"
+        app:layout_constraintVertical_bias="0.007" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="170sp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="حيوانات اللأدغال"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.928"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/level3"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="@+id/level3"
+        app:layout_constraintTop_toTopOf="@+id/level3"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

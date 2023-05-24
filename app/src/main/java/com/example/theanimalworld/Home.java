@@ -11,17 +11,26 @@ import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Home extends AppCompatActivity {
+public class Home extends SettingShow {
     ImageView hand;
+    TextView txt;
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
 
+        txt=findViewById(R.id.rank_level);
+        try {
+            get_rank_data("cherif123123");
+            txt.setText(RANKLEVEL);
+        }catch (Exception e){
+
+        }
         // setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
 

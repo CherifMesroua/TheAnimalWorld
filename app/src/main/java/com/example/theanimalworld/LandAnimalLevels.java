@@ -46,15 +46,20 @@ public class LandAnimalLevels extends SettingShow {
 
         stars_level1 = findViewById(R.id.stars_level1);
         stars_level1.setOnClickListener(View->{
+            try {
+                String nbrStars = String.valueOf(ACTIVITY_INFO.get("nbr_stars"));
+                if (nbrStars.equals("3")) {
+                    stars_level1.setImageResource(R.drawable.full_stars);
+                } else if (nbrStars.equals("2")) {
+                    stars_level1.setImageResource(R.drawable.stars_70);
+                } else {
+                    stars_level1.setImageResource(R.drawable.stars_30);
+                }
+            }catch (Exception e){
 
-            String nbrStars = String.valueOf(ACTIVITY_INFO.get("nbr_stars")) ;
-            if (nbrStars.equals("3")) {
-                stars_level1.setImageResource(R.drawable.full_stars);
-            } else if (nbrStars.equals("2")) {
-                stars_level1.setImageResource(R.drawable.stars_70);
-            } else {
-                stars_level1.setImageResource(R.drawable.stars_30);
             }
+
+
         });
 
     }

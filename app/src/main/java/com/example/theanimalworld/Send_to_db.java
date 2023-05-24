@@ -51,12 +51,18 @@ public class Send_to_db extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_to_db);
+
+
+
         //test to store a username change it later*******************
         //SharedPreferences preferences=getSharedPreferences("pref", Context.MODE_PRIVATE);
 
         //getdata("cherif123123");
         //************************************************************
 
+        //get_rank_data("cherif123123");
+
+        //get_activity_data("cherif123123",0);
         btnA=findViewById(R.id.A);
         btnB=findViewById(R.id.B);
         LinearLayout lnA=findViewById(R.id.registerLayout);
