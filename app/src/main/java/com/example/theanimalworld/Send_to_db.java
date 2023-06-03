@@ -41,7 +41,7 @@ public class Send_to_db extends AppCompatActivity {
    private  FirebaseDatabase db;
     private DatabaseReference reference=FirebaseDatabase.getInstance().getReference("users");
 
-    public Send_to_db(){}
+
     Button btnA,btnB;
     TextView txtA,txtB;
     private TextInputEditText usernameA,passwordA,usernameB,passwordB,ageA;
@@ -52,17 +52,6 @@ public class Send_to_db extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_to_db);
 
-
-
-        //test to store a username change it later*******************
-        //SharedPreferences preferences=getSharedPreferences("pref", Context.MODE_PRIVATE);
-
-        //getdata("cherif123123");
-        //************************************************************
-
-        //get_rank_data("cherif123123");
-
-        //get_activity_data("cherif123123",0);
         btnA=findViewById(R.id.A);
         btnB=findViewById(R.id.B);
         LinearLayout lnA=findViewById(R.id.registerLayout);
@@ -121,6 +110,7 @@ public class Send_to_db extends AppCompatActivity {
         String user,pass,age;
         int Nage;
         user=String.valueOf(usernameA.getText());
+        USERNAME=user;
         pass=String.valueOf(passwordA.getText());
         age=String.valueOf(ageA.getText());
         try{
@@ -345,6 +335,7 @@ public class Send_to_db extends AppCompatActivity {
                 return;
             }
         else{
+                USERNAME=user_login;
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(Send_to_db.this);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("username", user_login);

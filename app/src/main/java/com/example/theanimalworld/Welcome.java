@@ -21,13 +21,14 @@ public class Welcome extends SettingShow {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(Welcome.this);
-        USERNAME=preferences.getString("username","");
-        if (USERNAME.equals("")) {
+        String user=preferences.getString("username","");
+       // Toast.makeText(this,USERNAME,Toast.LENGTH_SHORT).show();
+
+        if (user.equals("")) {
             Intent intent = new Intent(Welcome.this, Send_to_db.class);
             startActivity(intent);
             finish();
         }
-        //Toast.makeText(this,user,Toast.LENGTH_SHORT).show();
         setContentView(R.layout.activity_welcome);
 
         wplay=findViewById(R.id.Wplay);

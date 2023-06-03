@@ -17,14 +17,16 @@
         <activity
             android:name=".Welcome"
 
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".Learning_level1"
 
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Send_to_db"
+            android:name=".Home"
+
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
@@ -40,7 +42,7 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Home"
+            android:name=".Send_to_db"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>
