@@ -1,0 +1,1 @@
+An android app i developped using java and android studio, it is an engaging and interactive Android app designed to introduce kindergarteners to the fascinating world of animals. Through a series of colorful and educational activities, children can learn about different animals, their habitats, and unique characteristics in a fun and interactive way.
